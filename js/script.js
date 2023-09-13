@@ -1,29 +1,40 @@
-//quero colocar na cor da div uma cor aleatória de acordo com as cores em um vetor
-// vetor de cores: #02010 #020202 #090392 #0493043
-// tenho um vetor de 4 cores e vou fazer uma função que seleciona números aleatórios entre 0 e 4,
-//para corresponder a posição do vetor
-
-// cor da div = cor aleatória
-//cor aleatória vai receber o conteúdo de uma posição aleatória do vetor
-
 const card = document.querySelectorAll('.card');
-
 let cores = [
     "#3B95FF",
     "#FCBEDD",
     "#8B63FF",
     "#FFC53B"
 ]
+function corAleatoria(){
+    return Math.floor(Math.random()*cores.length)
+  
+}
+card.forEach((div)=>{
+    let IndexCor = corAleatoria()
+    let cor = cores[IndexCor]
+    div.style.backgroundColor = cor
+})
 
-// (()=>{
-//     card.forEach(carta =>
-//         {
-//             let pos = Math.floor(Math.random()*5)
-//             card.style.color = cores[pos]
-//         });
-// })();
+try {
+    document.body.onload = AddCards()
 
+function AddCards() {
+    const divExist = document.querySelectorAll("hero-cards")
 
-console.log(cores[0])
+    let cardNovo = document.createElement("div")
+    cardNovo.className = "card";
+
+    let conteudoCard = document.createElement("img")
+    conteudoCard.
+
+    cardNovo.appendChild(conteudoCard)
+
+    divExist.appendChild(cardNovo)
+}
+console.log("OK")
+} catch (error) {
+    
+}
+
 
 
