@@ -1,11 +1,10 @@
-<<<<<<< Updated upstream
+
 const card = document.querySelectorAll('.card');
 let cores = [
     "#3B95FF",
     "#FCBEDD",
     "#8B63FF",
-    "#FFC53B"
-=======
+    "#FFC53B"]
 const cartas = document.querySelectorAll('.card')
 const coresCartas = ["#3B95FF","#FCBEDD","#8B63FF","#FFC53B"]
 const heroCards = document.getElementById('hero-cartas')
@@ -19,7 +18,6 @@ const imagensCards = [
     "serious-girl",
     "guy-robot",
     "guy-diving"
->>>>>>> Stashed changes
 ]
 function corAleatoria(){
     return Math.floor(Math.random()*cores.length)
@@ -31,7 +29,7 @@ card.forEach((div)=>{
     div.style.backgroundColor = cor
 })
 
-<<<<<<< Updated upstream
+
 try {
     document.body.onload = AddCards()
 
@@ -54,7 +52,6 @@ console.log("OK")
 }
 
 
-=======
 
 function criar(){
     let card = null;
@@ -90,6 +87,4 @@ function virarCarta(){
 cartas.forEach(carta => carta.addEventListener('click',virarCarta))
 
 
-
->>>>>>> Stashed changes
 
