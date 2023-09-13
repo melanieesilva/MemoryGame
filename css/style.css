@@ -97,7 +97,6 @@ header > nav > button{
 .card{
     width: calc(33.333% - 10px);
     height: calc(40% - 10px);
-    background-color: black;
     margin: 3px;
     border-radius: 5px;
     display: flex;
@@ -109,6 +108,10 @@ header > nav > button{
 .card:active{
     transform: scale(0.97);
 }
+.card:hover{
+    transform: scale(0.97);
+}
+
 
 .option{
     display: flex;
@@ -118,7 +121,7 @@ header > nav > button{
     padding: 24px;
     border-radius: 4px;
     border: solid 1px black;
-    box-shadow: 0px 4px 0px black;
+    box-shadow: 0px 4px 2px rgb(33, 33, 33);
     margin-block-end: 16px;
     transform: scale(1);
 }
@@ -142,12 +145,23 @@ header > nav > button{
     text-decoration: none;
     color: black;
 }
+<<<<<<< Updated upstream
 .option > a:active{
     transform: scale(0.98);
     color: #5800fc;
 }
 .option > a:hover{
+=======
+.option > button > a {
+    text-decoration: none;
+    color: black;
+}
+.option > button > a:active{
+    transform: scale(0.98);
+    color: #5800fc;
+}
+.option > button> a:hover{
+>>>>>>> Stashed changes
     color: #ac80ff;
 }
-
 

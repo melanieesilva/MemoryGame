@@ -1,9 +1,25 @@
+<<<<<<< Updated upstream
 const card = document.querySelectorAll('.card');
 let cores = [
     "#3B95FF",
     "#FCBEDD",
     "#8B63FF",
     "#FFC53B"
+=======
+const cartas = document.querySelectorAll('.card')
+const coresCartas = ["#3B95FF","#FCBEDD","#8B63FF","#FFC53B"]
+const heroCards = document.getElementById('hero-cartas')
+const imagensCards = [
+    "cool-guy",
+    "girl-artist",
+    "girl-crown",
+    "girl-hat",
+    "girl-headphone",
+    "guy-playing",
+    "serious-girl",
+    "guy-robot",
+    "guy-diving"
+>>>>>>> Stashed changes
 ]
 function corAleatoria(){
     return Math.floor(Math.random()*cores.length)
@@ -15,6 +31,7 @@ card.forEach((div)=>{
     div.style.backgroundColor = cor
 })
 
+<<<<<<< Updated upstream
 try {
     document.body.onload = AddCards()
 
@@ -37,4 +54,42 @@ console.log("OK")
 }
 
 
+=======
+
+function criar(){
+    let card = null;
+    for (let index = 0; index < imagensCards.length; index++) {
+        // const imgIndex = imagensCards[index];
+        card = document.createElement('div', { class: 'card', id: 'card_hero' }, 'OLÁ');
+    
+    }
+    return card;
+
+}
+
+let card1 = criar();
+
+heroCards.appendChild(card1)
+
+function corAleatoria(){
+    return Math.floor(Math.random()*coresCartas.length)
+}
+
+cartas.forEach((div) => {
+    const corAleatoriaIndex = corAleatoria()
+    const corDiv = coresCartas[corAleatoriaIndex]
+    div.style.backgroundColor = corDiv
+})
+
+function virarCarta(){
+    this.classList.add('flip')
+}
+
+
+
+cartas.forEach(carta => carta.addEventListener('click',virarCarta))
+
+
+
+>>>>>>> Stashed changes
 
