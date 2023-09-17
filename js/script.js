@@ -1,13 +1,10 @@
 
-const card = document.querySelectorAll('.card');
-let cores = [
+const coresCards = [
     "#3B95FF",
     "#FCBEDD",
     "#8B63FF",
-    "#FFC53B"]
-const cartas = document.querySelectorAll('.card')
-const coresCartas = ["#3B95FF","#FCBEDD","#8B63FF","#FFC53B"]
-const heroCards = document.getElementById('hero-cartas')
+    "#FFC53B"
+]
 const imagensCards = [
     "cool-guy",
     "girl-artist",
@@ -19,72 +16,32 @@ const imagensCards = [
     "guy-robot",
     "guy-diving"
 ]
+const heroCards = document.getElementById("hero-cards")
+
+
 function corAleatoria(){
-    return Math.floor(Math.random()*cores.length)
-  
-}
-card.forEach((div)=>{
-    let IndexCor = corAleatoria()
-    let cor = cores[IndexCor]
-    div.style.backgroundColor = cor
-})
-
-
-try {
-    document.body.onload = AddCards()
-
-function AddCards() {
-    const divExist = document.querySelectorAll("hero-cards")
-
-    let cardNovo = document.createElement("div")
-    cardNovo.className = "card";
-
-    let conteudoCard = document.createElement("img")
-    conteudoCard.
-
-    cardNovo.appendChild(conteudoCard)
-
-    divExist.appendChild(cardNovo)
-}
-console.log("OK")
-} catch (error) {
-    
+    return Math.floor(Math.random()*coresCards.length)
 }
 
+function AdicionarCarta() {
+    for(var i = 0;i < 9;i++){
+        let novaCard = document.createElement("div")
+        novaCard.className = "card"
 
+        let imgCard = document.createElement("img")
+        imgCard.src = "/img/"+imagensCards[i]+".png";
 
-function criar(){
-    let card = null;
-    for (let index = 0; index < imagensCards.length; index++) {
-        // const imgIndex = imagensCards[index];
-        card = document.createElement('div', { class: 'card', id: 'card_hero' }, 'OLÁ');
-    
+        let IndexCor = corAleatoria()
+        let cor = coresCards[IndexCor]
+        novaCard.style.backgroundColor = cor;
+
+        novaCard.appendChild(imgCard)
+        heroCards.appendChild(novaCard)
     }
-    return card;
-
+    console.log("OK")
 }
 
-let card1 = criar();
-
-heroCards.appendChild(card1)
-
-function corAleatoria(){
-    return Math.floor(Math.random()*coresCartas.length)
-}
-
-cartas.forEach((div) => {
-    const corAleatoriaIndex = corAleatoria()
-    const corDiv = coresCartas[corAleatoriaIndex]
-    div.style.backgroundColor = corDiv
-})
-
-function virarCarta(){
-    this.classList.add('flip')
-}
-
-
-
-cartas.forEach(carta => carta.addEventListener('click',virarCarta))
+document.body.onload = AdicionarCarta()
 
 
 

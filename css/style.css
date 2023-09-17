@@ -12,7 +12,6 @@ body{
     background: linear-gradient(-45deg, #2c007e, #7229f8, #935bfa, #4f01df);
 	background-size: 400% 400%;
 	animation: gradient 8s ease infinite;
-	height: 100vh;
 }
 
 @keyframes gradient {
@@ -50,6 +49,10 @@ header > nav > button{
     box-shadow: 0px 2px 0px black;
     transform: scale(1);
 }
+header > nav > button > a{
+    text-decoration: none;
+    color: black;
+}
 .btn-git:active{
     transform: scale(0.96);
 }
@@ -58,6 +61,8 @@ header > nav > button{
 }
 .btn-feedback{
     background-color: #935bfa;
+}
+.btn-feedback > a{
     color: white;
 }
 
@@ -104,14 +109,12 @@ header > nav > button{
     justify-content: center;
     box-shadow: 0px 2px 4px black;
 }
-
 .card:active{
     transform: scale(0.97);
 }
 .card:hover{
     transform: scale(0.97);
 }
-
 
 .option{
     display: flex;
@@ -145,23 +148,11 @@ header > nav > button{
     text-decoration: none;
     color: black;
 }
-<<<<<<< Updated upstream
 .option > a:active{
     transform: scale(0.98);
     color: #5800fc;
 }
 .option > a:hover{
-=======
-.option > button > a {
-    text-decoration: none;
-    color: black;
-}
-.option > button > a:active{
-    transform: scale(0.98);
-    color: #5800fc;
-}
-.option > button> a:hover{
->>>>>>> Stashed changes
     color: #ac80ff;
 }
 
